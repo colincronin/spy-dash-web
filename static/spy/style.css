@@ -1,0 +1,246 @@
+body {
+    margin: auto; /* center in viewport */
+    max-width:960px;
+    background-color:white;
+    color:black;
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    background-image:url('coreimages/layrifle.png');
+    background-repeat:no-repeat;
+    background-position:bottom left;
+    background-attachment:fixed;
+}
+a {
+    text-decoration:none;
+}
+a:link {
+    color:brown;
+}
+a:hover {
+    color:teal;
+}
+a:visited {
+    color:brown;
+}
+a:active {
+    color:#FFFFFF;
+}
+img {
+    border:0;
+}
+p {
+    margin:0;
+    padding:0;
+}
+ul {
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    margin-top:0.2em;
+}
+li {
+    margin:0;
+    padding:0;
+}
+#topnav {
+    z-index:5;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:1.6em;
+    margin:0;
+    padding:0;
+    background-color:black;
+    font-size:0.8em;
+    font-weight:bold;
+    line-height:0.9em;
+}
+#topnav-left {
+    float:left;
+    height:1.5em;
+}
+#topnav-right {
+    float:right;
+    height:1.5em;
+}
+#topnav li {
+    display:inline;
+    margin-top:0em;
+    margin-bottom:0em;
+    margin-left:1em;
+    margin-right:1em;
+}
+#topnav a:link {
+    color:#999999;
+}
+#topnav a:hover {
+    color:#FFFFFF;
+}
+#topnav a:visited {
+    color:#999999;
+}
+#topnav a:active {
+    color:blue;
+}
+#content {
+    width:99.9%;
+    margin-top:1.6em;
+    margin-bottom:0;
+    margin-left:0;
+    margin-right:0;
+    padding:0;
+}
+#entry {
+    width:99.9%;
+    margin:0;
+    padding:0;
+}
+.banner {
+    width:100%;
+    margin:0;
+    padding:0;
+}
+.post {
+    border-top-style:double;
+    border-top-color:#dcdcdc;
+    border-bottom-style:double;
+    border-bottom-color:#ababab;
+    border-left-style:double;
+    border-left-color:#999999;
+    border-right-style:double;
+    border-right-color:#dcdcdc;
+    background-image:url('coreimages/brushed-silver.png');
+    margin-bottom:1em;
+    padding:0.2em;
+    clear:both;
+}
+.posttitle {
+    display:inline-block;
+    font-size:2em;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+.posttitle a {
+    color:black;
+}
+.poststats {
+    display:inline-block;
+    font-size:0.5em;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+}
+.postcontent {
+    display:inline-block;
+    font-size:1em;
+    font-weight:none;
+    margin-top:0.5em;
+    padding:0;
+}
+.postcontent p {
+    margin-bottom:1em;
+}
+.tags {
+    display:inline-block;
+    font-size:0.5em;
+    font-weight:bold;
+    margin:0;
+    padding:0;
+    padding-top:1em;
+    padding-bottom:3.5em;
+    clear:both;
+    float:right;
+}
+.postleft {
+    width:4em;
+    float:left;
+}
+#postlist {
+    width:100%;
+    border-collapse:collapse;
+    margin-bottom:2em;
+}
+#postlist th {
+    font-size:1.5em;
+    text-align:left;
+    border:1px solid #333333;
+    padding:5px 7px 5px 7px;
+    background-color:#666666;
+    color:#CCCCCC;
+}
+#postlist td {
+    font-size:1em;
+    border:1px solid #333333;
+    padding:3px 7px 3px 7px;
+    color:#000000;
+    background-color:#CCCCCC;
+}
+#postlist tr.alt td {
+    color:#000000;
+    background-color:#AAAAAA;
+}
+.questions {
+    margin-top:0;
+    margin-bottom:1em;
+    margin-left:1em;
+    margin-right:1em;
+    color:blue;
+    float:left;
+}
+.questions h2 {
+    margin:0;
+}
+.questions li {
+    padding-left:1em;
+}
+.answers {
+    clear:both;
+}
+.answers h2 {
+    margin:0;
+    padding:0;
+    line-height:1.5em;
+}
+.answers h3 {
+    margin:0;
+    padding:0;
+    padding-top:0.5em;
+}
+.answers p {
+    padding-top:0.1em;
+}
+.answers li {
+    padding-left:1em;
+}
+.answers a:link {
+    color:brown;
+}
+.answers a:hover {
+    color:grey;
+}
+.answers a:visited {
+    color:brown;
+}
+.answers a:active {
+    color:#FFFFFF;
+}
+#footer {
+    margin:auto;
+    width:95%;
+    position:fixed;
+    z-index:5;
+    bottom:0;
+    left:2.5%;
+    background-color:#dcdcdc;
+    text-align:center;
+    font-weight:bold;
+    font-size:0.9em;
+    line-height:0.9em;
+}
+.ftleft {
+    float:left;
+}
+.ftright {
+    float:right;
+}

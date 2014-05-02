@@ -1,0 +1,17 @@
+{%extends "spy/base.html" %}
+{% load staticfiles %}
+
+{% block title %}Spy-Dash! | {{ tag|capfirst }}{% endblock %}
+
+{% block content %}
+
+<table id="postlist">
+<th colspan="3">Posts tagged: {{tag}}</th>
+{% for post in posts %}
+{% if forloop.counter|divisibleby:2 %}<tr class="alt">{% else %}<tr>{% endif %}<td>{{ post.created|date:"Y-m-d, g:i a" }} by {{ post.blogger|capfirst  }}:</td><td><a href="{% url 'spy:post_slug' post.slug %}">{{ post.title }}</a></td><td>{% if post.is_modified %}<span class="modified">(Modified on {{ post.modified }})</span>{% endif %}</td></tr>
+{% endfor %}
+</table><!--end postlist-->
+
+{% endblock %}
+
+

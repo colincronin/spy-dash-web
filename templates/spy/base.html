@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+{% load staticfiles %}
+{% load spy_extras %}
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}Spy-Dash!{% endblock %}</title>
+    <meta name="viewport" content="width=device-width; initial-scale=0.4; maximum-scale=0.6">
+    <meta name="description" content="The Mobile Espionage Running Game">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'spy/favicon.ico' %}" />
+    <link rel="icon" type="image/x-icon" href="{% static 'spy/favicon.ico' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'spy/style.css' %}" />
+    <script src="{% static 'spy/jscripts.js' %}"></script>
+    <!-- Apple Icons -->
+    <link rel="apple-touch-icon" href="icons/touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="icons/touch-icon-ipad.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="icons/touch-icon-iphone4.png" />
+    <link rel="apple-touch-startup-image" href="startup.png">
+</head>
+<body>
+<div id="topnav">
+<div id="topnav-left">
+<ul>
+<li><a href="{% url 'spy:index' %}">Spy-Dash!</a></li>
+<li><a href="#shop">Shop</a></li>
+<li><a href="#support">Support</a></li>
+</ul>
+</div><!--end topnav-left-->
+<div id="topnav-right">
+<ul>
+{% if user.is_authenticated %}
+    <li><a href="{% url 'admin:index' %}">Hello {{ user.username|capfirst }}, </a><a href="{% url 'spy:logout' %}">Logout?</a></li>
+{% else %}
+    <li><a href="{% url 'spy:login' %}">Login</a></li>
+{% endif %}
+</ul>
+</div><!--end topnav-right-->
+</div><!--end topnav-->
+<div id="content">
+{% block content %}
+
+{% endblock %}
+</div><!--end content-->
+{% block footer %}
+<div id="footer">
+<span id="updatedate" class="ftleft"><a href="{% url 'spy:archives' %}">Archives</a><br>Last Updated: {% last_update '%m/%d/%Y' %}</span>
+<span id="copyright" class="ftright">
+{% if is_paginated %}
+            {% if page_obj.has_previous %}
+                <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+            {% endif %}
+
+                Page {{ page_obj.number }} of {{ paginator.num_pages }}
+
+            {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}">next</a>
+            {% endif %}
+{% endif %}
+<br>&copy {% now "Y"  %}</span>
+</div><!--end footer-->
+{% endblock %}
+</body>
+</html>

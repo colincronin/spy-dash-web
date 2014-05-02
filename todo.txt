@@ -1,0 +1,6 @@
+Add Link to Spy-Dash! Index page to admin interface
+Rewrite support page for Django
+Determine and implement shopping cart
+Write tests for models
+Write tests for views: login, support, shop
+Look into avatar choices outside of fresh uploads
