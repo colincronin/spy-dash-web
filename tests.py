@@ -328,3 +328,8 @@ class PostModelTestCase(TestCase):
         self.assertEqual(self.post_2.upper_case_name(), 'Jane')
         self.assertEqual(self.post_3.upper_case_name(), 'Jane')
         self.assertEqual(self.post_4.upper_case_name(), 'John')
+    def test_is_not_modified(self):
+        self.assertEqual(self.post_1.is_modified(), False)
+        self.assertEqual(self.post_2.is_modified(), False)
+        self.assertEqual(self.post_3.is_modified(), False)
+        self.assertEqual(self.post_4.is_modified(), False)

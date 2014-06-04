@@ -1,6 +1,7 @@
 Add Link to Spy-Dash! Index page to admin interface
 Rewrite Support page for Django (Create Support View)
 Determine and implement shopping cart
-Write tests for remaining custom model methods
-Write tests for views: login, support, shop
+Write tests for views: login, support, shop, blogger
 Look into avatar choices outside of fresh uploads
+Create Blogger view to list all posts by blogger
+Link post template to blogger view in post description and on avatar image
